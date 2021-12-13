@@ -7,7 +7,7 @@ import ModalAddFood from '../../components/ModalAddFood'
 import ModalEditFood from '../../components/ModalEditFood'
 import { FoodsContainer } from './styles'
 
-class Dashboard extends Component {
+export class Dashboard extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -117,5 +117,3 @@ class Dashboard extends Component {
     )
   }
 }
-
-export default Dashboard

@@ -3,19 +3,11 @@ import { FiEdit3, FiTrash } from 'react-icons/fi'
 
 import { Container } from './styles'
 import { api } from '../../services/api'
-
-interface Food {
-  id: number
-  name: string
-  description: string
-  price: string
-  available: boolean
-  image: string
-}
+import { FoodType } from '../../types/FoodType'
 
 interface FoodProps {
-  food: Food
-  handleEditFood: (food: Food) => void
+  food: FoodType
+  handleEditFood: (food: FoodType) => void
   handleDelete: (foodId: number) => void
 }
 
@@ -31,7 +23,6 @@ export function Food({ food, handleEditFood, handleDelete }: FoodProps) {
     setIsAvailable(!isAvailable)
   }
 
-  console.log(food)
   const setEditingFood = () => {
     handleEditFood(food)
   }
